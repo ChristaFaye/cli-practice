@@ -22,6 +22,13 @@ const supportedCurrencies = [
     'EUR'
 ];
 
+const ratesValue = {
+    USD: 1, //US Dollar
+    CAD: 1.27, //Canadian Dollar
+    PHP: 50.37, //Philippine Peso
+    GBP: 0.75, //British Pound
+    EUR: 0.88 //Euro
+    }
 
 const intCurrencyNotIncluded = (intCurrency) => {
     return supportedCurrencies.includes(intCurrency) === false;
@@ -39,5 +46,6 @@ module.exports = {
     //Supported currencies check functions
     intCurrencyNotIncluded,
     targetCurrencyNotIncluded,
-    supportedCurrencies
+    supportedCurrencies,
+    ratesValue
 } ;
