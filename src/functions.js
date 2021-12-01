@@ -19,7 +19,13 @@ const supportedCurrencies = [
     'CAD',
     'PHP',
     'GBP',
-    'EUR'
+    'EUR',
+    'INR',
+    'AUD',
+    'SGD',
+    'JPY',
+    'SAR',
+    'KRW'
 ];
 
 const ratesValue = {
@@ -27,7 +33,13 @@ const ratesValue = {
     CAD: 1.27, //Canadian Dollar
     PHP: 50.37, //Philippine Peso
     GBP: 0.75, //British Pound
-    EUR: 0.88 //Euro
+    EUR: 0.88, //Euro
+    INR: 74.84, //Indian Rupee
+    AUD: 1.39, //Australian Dollar
+    SGD: 1.36, //Singapore Dollar
+    JPY: 113.04, //Japanese Yen
+    SAR: 3.75, //Saudi Arabian Riyals
+    KRW: 1173.87 //South Korean Won
     }
 
 const intCurrencyNotIncluded = (intCurrency) => {
