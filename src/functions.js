@@ -13,6 +13,15 @@ const isTargetCurrenctyUndefined = (targetCurrency) => {
 
 
 //Functions for checking if currency is supported
+
+const supportedCurrencies = [
+    'USD',
+    'CAD',
+    'PHP',
+    'GBP',
+    'EUR'
+];
+
 const isIntCurrencyIncluded = (intCurrency) => {
     return supportedCurrencies.includes(intCurrency) === false;
 };
