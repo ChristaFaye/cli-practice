@@ -25,26 +25,19 @@ const targetCurrency = process.argv[4];
 
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
-const { 
-    isAmountUndefined,
-    isIntCurrencyUndefined,
-    isTargetCurrenctyUndefined,
-    intCurrencyNotIncluded,
-    targetCurrencyNotIncluded,
-    supportedCurrencies,
-    ratesValue
-} = require('./functions');
+const f = require('./functions');
 
-if (isAmountUndefined(amount)) {
+if (f.isAmountUndefined(amount)) {
     console.error(`Oops, the amount must be greater than 0. Received: `, amount);
     process.exit();
 }
-if (isIntCurrencyUndefined(intCurrency)) {
+
+if (f.isIntCurrencyUndefined(intCurrency)) {
     console.error(`Oops, you must provide initial currency. Received: `, intCurrency);
     process.exit();
 }
 
-if (isTargetCurrenctyUndefined(targetCurrency)) {
+if (f.isTargetCurrenctyUndefined(targetCurrency)) {
     console.error(`Oops, you must provide target currency. Received: `, targetCurrency);
     process.exit();
 }
@@ -76,13 +69,13 @@ if (isTargetCurrenctyUndefined(targetCurrency)) {
 // warning message and exit the program.
 
 
-if (intCurrencyNotIncluded(intCurrency)) {
-    console.error(`Oops, initial currency is unsupported. The supported currencies are: `, supportedCurrencies);
+if (f.intCurrencyNotIncluded(intCurrency)) {
+    console.error(`Oops, initial currency is unsupported. The supported currencies are: `, f.supportedCurrencies);
     process.exit();
 }
 
-if (targetCurrencyNotIncluded(targetCurrency)) {
-    console.error(`Oops, target currency is unsupported. The supported currencies are: `, supportedCurrencies);
+if (f.targetCurrencyNotIncluded(targetCurrency)) {
+    console.error(`Oops, target currency is unsupported. The supported currencies are: `, f.supportedCurrencies);
     process.exit();
 }
 
@@ -95,7 +88,7 @@ if (targetCurrencyNotIncluded(targetCurrency)) {
 // Now we will compute the rate, apply it to the amount, and capture the result.
 //(amount/intCurrency) * targetCurrency
 
-const convertedAmount = (parseInt(amount) / ratesValue[intCurrency]) * ratesValue[targetCurrency];
+const convertedAmount = (parseInt(amount) / f.ratesValue[intCurrency]) * f.ratesValue[targetCurrency];
 let convertedAmnt = convertedAmount.toFixed(4);
 
 // --------------------------------------------------
