@@ -3,6 +3,10 @@ const isAmountUndefined = (amount) => {
     return amount === undefined || amount < 0;
 };
 
+const isAmountString = (amount) => {
+    return typeof amount === 'string' || amount instanceof string;
+};
+
 const isIntCurrencyUndefined = (intCurrency) => {
     return intCurrency === undefined;
 };
@@ -49,6 +53,7 @@ const targetCurrencyNotIncluded = (targetCurrency) => {
 module.exports = {
     //User Input Validation functions
     isAmountUndefined,
+    isAmountString,
     isIntCurrencyUndefined,
     isTargetCurrenctyUndefined,
     //Supported currencies check functions

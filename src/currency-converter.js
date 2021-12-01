@@ -27,7 +27,12 @@ const targetCurrency = process.argv[4];
 const f = require('./functions');
 
 if (f.isAmountUndefined(amount)) {
-    console.error(`Oops, the amount must be greater than 0. Received: `, amount);
+    console.error(`Oops, the amount must be a number greater than 0. Received: `, amount);
+    process.exit();
+}
+
+if (f.isAmountString(amount)) {
+    console.error(`Oops, the amount must be a number greater than 0. Received: `, amount);
     process.exit();
 }
 
