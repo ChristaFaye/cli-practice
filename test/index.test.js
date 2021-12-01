@@ -23,6 +23,14 @@ describe('isAmountUndefined()', () => {
   });
 });
 
+describe('isAmountString()', () => {
+  test('should return true when the amount is a string', () => {
+    let amount = 'A';
+    const result = f.isAmountString(amount);
+    expect(result).toBe(true);
+  });
+});
+
 describe('isIntCurrencyUndefined()', () => {
   test('should return true when the initial currency is undefined', () => {
     let intCurrency;
@@ -45,6 +53,14 @@ describe('intCurrencyNotIncluded()', () => {
   test('should return true when the initial currency is not supported', () => {
     let intCurrency;
     const result = f.intCurrencyNotIncluded();
+    expect(result).toBe(true);
+  });
+});
+
+describe('targetCurrencyNotIncluded()', () => {
+  test('should return true when the target currency is not supported', () => {
+    let targetCurrency;
+    const result = f.targetCurrencyNotIncluded();
     expect(result).toBe(true);
   });
 });
