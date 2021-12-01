@@ -22,11 +22,11 @@ const supportedCurrencies = [
     'EUR'
 ];
 
-const isIntCurrencyIncluded = (intCurrency) => {
+const intCurrencyIncluded = (intCurrency) => {
     return supportedCurrencies.includes(intCurrency) === false;
 };
 
-const isTargetCurrencyIncluded = (targetCurrency) => {
+const targetCurrencyIncluded = (targetCurrency) => {
     return supportedCurrencies.includes(targetCurrency) === false;
 };
 
@@ -36,6 +36,6 @@ module.exports = {
     isIntCurrencyUndefined,
     isTargetCurrenctyUndefined,
     //Supported currencies check functions
-    isIntCurrencyIncluded,
-    isTargetCurrencyIncluded
+    intCurrencyIncluded,
+    targetCurrencyIncluded
 } ;
