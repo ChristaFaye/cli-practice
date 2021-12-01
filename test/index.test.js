@@ -11,18 +11,14 @@
 // same file for illustrative and learning purposes.
 
 
-//Import user input validation functions
-const { 
-  isAmountUndefined,
-  isIntCurrencyUndefined,
-  isTargetCurrenctyUndefined 
-} = require('../src/functions');
+//Import functions
+const f = require('../src/functions');
 
 //Test Cases for User input validation
 describe('isAmountUndefined()', () => {
   test('should return true when the amount is undefined', () => {
     let amount;
-    const result = isAmountUndefined();
+    const result = f.isAmountUndefined();
     expect(result).toBe(true);
   });
 });
@@ -30,7 +26,7 @@ describe('isAmountUndefined()', () => {
 describe('isIntCurrencyUndefined()', () => {
   test('should return true when the initial currency is undefined', () => {
     let intCurrency;
-    const result = isIntCurrencyUndefined();
+    const result = f.isIntCurrencyUndefined();
     expect(result).toBe(true);
   });
 });
@@ -38,22 +34,17 @@ describe('isIntCurrencyUndefined()', () => {
 describe('isTargetCurrenctyUndefined()', () => {
   test('should return true when the target currency is undefined', () => {
     let targetCurrency;
-    const result = isTargetCurrenctyUndefined();
+    const result = f.isTargetCurrenctyUndefined();
     expect(result).toBe(true);
   });
 });
 
-//Import supported currencies check functions
-const { 
-  intCurrencyNotIncluded,
-  targetCurrencyNotIncluded,
-} = require('../src/functions');
 
 //Test Cases supported currencies check functions
 describe('intCurrencyNotIncluded()', () => {
   test('should return true when the initial currency is not supported', () => {
     let intCurrency;
-    const result = intCurrencyNotIncluded();
+    const result = f.intCurrencyNotIncluded();
     expect(result).toBe(true);
   });
 });
@@ -61,7 +52,7 @@ describe('intCurrencyNotIncluded()', () => {
 describe('targetCurrencyNotIncluded()', () => {
   test('should return true when the target currency is not supported', () => {
     let targetCurrency;
-    const result = targetCurrencyNotIncluded();
+    const result = f.targetCurrencyNotIncluded();
     expect(result).toBe(true);
   });
 });
