@@ -10,14 +10,32 @@
 // file. In this case we've defined the function and the corresponding test in the
 // same file for illustrative and learning purposes.
 
-function myCoolFunction() {
-  return 'Wow, what a cool function!!!!';
-}
+const { 
+  isAmountUndefined,
+  isIntCurrencyUndefined,
+  isTargetCurrenctyUndefined 
+} = require('../src/functions');
 
-describe('myCoolFunction()', () => {
-  test('should return the message: "Wow, what a cool function"', () => {
-    const result = myCoolFunction();
+describe('isAmountUndefined()', () => {
+  test('should return true when the amount is undefined', () => {
+    let amount;
+    const result = isAmountUndefined();
+    expect(result).toBe(true);
+  });
+});
 
-    expect(result).toBe('Wow, what a cool function');
+describe('isIntCurrencyUndefined()', () => {
+  test('should return true when the initial currency is undefined', () => {
+    let intCurrency;
+    const result = isIntCurrencyUndefined();
+    expect(result).toBe(true);
+  });
+});
+
+describe('isTargetCurrenctyUndefined()', () => {
+  test('should return true when the target currency is undefined', () => {
+    let targetCurrency;
+    const result = isTargetCurrenctyUndefined();
+    expect(result).toBe(true);
   });
 });
