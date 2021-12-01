@@ -78,13 +78,7 @@ EUR: 0.88 //Euro
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
-const supportedCurrencies = [
-    'USD',
-    'CAD',
-    'PHP',
-    'GBP',
-    'EUR'
-];
+
 
 const { 
     isIntCurrencyIncluded,
