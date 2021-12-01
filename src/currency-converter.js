@@ -70,6 +70,14 @@ let EUR = 0.88; //Euro
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
+const supportedCurrencies = [
+    'USD',
+    'CAD',
+    'PHP',
+    'GBP',
+    'EUR'
+];
+
 
 
 // --------------------------------------------------
@@ -79,7 +87,7 @@ let EUR = 0.88; //Euro
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
-
+//(amount/intCurrency) * targetCurrency
 
 
 // --------------------------------------------------
