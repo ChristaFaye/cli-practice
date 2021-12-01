@@ -52,6 +52,13 @@ if (targetCurrency === undefined) {
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
+//Base currency is USD, e.g 1USD = 1.27CAD
+let USD = 1; //US Dollar
+let CAD = 1.27; //Canadian Dollar
+let PHP = 50.37; //Philippine Peso
+let GBP = 0.75; //British Pound
+let EUR = 0.88; //Euro
+
 
 
 // --------------------------------------------------
