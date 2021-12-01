@@ -22,7 +22,6 @@ const targetCurrency = process.argv[4];
 // Step 2: Validate user input
 // --------------------------------------------------
 // Next we will ensure that the user has provided all of the require information.
-
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 const f = require('./functions');
@@ -54,9 +53,8 @@ if (f.isTargetCurrenctyUndefined(targetCurrency)) {
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
-//Base currency is USD, e.g 1USD = 1.27CAD
 
-
+//////Conversion rates moved to functions.js and imported to variable f//////
 
 
 // --------------------------------------------------
