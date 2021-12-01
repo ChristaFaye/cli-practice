@@ -106,6 +106,7 @@ if (targetCurrencyNotIncluded(targetCurrency)) {
 //(amount/intCurrency) * targetCurrency
 
 const convertedAmount = (parseInt(amount) / ratesValue[intCurrency]) * ratesValue[targetCurrency];
+let convertedAmnt = convertedAmount.toFixed(4);
 
 // --------------------------------------------------
 // Step 6: Display results
@@ -114,4 +115,7 @@ const convertedAmount = (parseInt(amount) / ratesValue[intCurrency]) * ratesValu
 
 // This message should also include the original amount and currency information
 // supplied by the user.
-console.log(`The conversion is ${amount} ${intCurrency} = ${convertedAmount} ${targetCurrency}. `)
+console.log(`Amount: ${amount}`);
+console.log(`Initial Currency: ${intCurrency}`);
+console.log(`Target Currency: ${targetCurrency}`);
+console.log(`The conversion is ${amount} ${intCurrency} = ${convertedAmnt} ${targetCurrency}. `)
