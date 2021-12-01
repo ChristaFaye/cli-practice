@@ -12,22 +12,15 @@ const isTargetCurrenctyUndefined = (targetCurrency) => {
 };
 
 
-//Functions for checking if currency is supported
-
+//Array for checking if currency is supported
 const supportedCurrencies = [
-    'USD',
-    'CAD',
-    'PHP',
-    'GBP',
-    'EUR',
-    'INR',
-    'AUD',
-    'SGD',
-    'JPY',
-    'SAR',
-    'KRW'
+    'USD', 'CAD', 'PHP',
+    'GBP', 'EUR', 'INR',
+    'AUD', 'SGD', 'JPY',
+    'SAR', 'KRW', 'HKD'
 ];
 
+//Conversion rate, USD as base currency
 const ratesValue = {
     USD: 1, //US Dollar
     CAD: 1.27, //Canadian Dollar
@@ -39,9 +32,11 @@ const ratesValue = {
     SGD: 1.36, //Singapore Dollar
     JPY: 113.04, //Japanese Yen
     SAR: 3.75, //Saudi Arabian Riyals
-    KRW: 1173.87 //South Korean Won
-    }
+    KRW: 1173.87, //South Korean Won
+    HKD: 7.79 //Hong Kong Dollars
+}
 
+//Functions for checking supported currencies
 const intCurrencyNotIncluded = (intCurrency) => {
     return supportedCurrencies.includes(intCurrency) === false;
 };
@@ -50,6 +45,7 @@ const targetCurrencyNotIncluded = (targetCurrency) => {
     return supportedCurrencies.includes(targetCurrency) === false;
 };
 
+//Exports functions
 module.exports = {
     //User Input Validation functions
     isAmountUndefined,
@@ -59,5 +55,6 @@ module.exports = {
     intCurrencyNotIncluded,
     targetCurrencyNotIncluded,
     supportedCurrencies,
+    //Rates value array
     ratesValue
 } ;
