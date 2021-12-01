@@ -86,12 +86,21 @@ const supportedCurrencies = [
     'EUR'
 ];
 
-if (supportedCurrencies.includes(intCurrency) === false) {
+const isIntCurrencyIncluded = (intCurrency) => {
+    return supportedCurrencies.includes(intCurrency) === false;
+};
+
+const isTargetCurrencyIncluded = (targetCurrency) => {
+    return supportedCurrencies.includes(targetCurrency) === false;
+};
+
+
+if (isIntCurrencyIncluded(intCurrency)) {
     console.error(`Oops, initial currency is unsupported. The supported currencies are: `, supportedCurrencies);
     process.exit();
 }
 
-if (supportedCurrencies.includes(targetCurrency) === false) {
+if (isTargetCurrencyIncluded(targetCurrency)) {
     console.error(`Oops, target currency is unsupported. The supported currencies are: `, supportedCurrencies);
     process.exit();
 }
