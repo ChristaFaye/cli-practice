@@ -26,17 +26,11 @@ const targetCurrency = process.argv[4];
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
-const isAmountUndefined = (amount) => {
-    return amount === undefined || amount < 0
-}
-
-const isIntCurrencyUndefined = (intCurrency) => {
-    return intCurrency === undefined
-}
-
-const isTargetCurrenctyUndefined = (targetCurrency) => {
-    return targetCurrency === undefined
-}
+const { 
+    isAmountUndefined,
+    isIntCurrencyUndefined,
+    isTargetCurrenctyUndefined 
+} = require('./functions');
 
 if (isAmountUndefined(amount)) {
     console.error(`Oops, the amount must be greater than 0. Received: `, amount);
