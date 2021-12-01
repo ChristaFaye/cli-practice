@@ -91,7 +91,7 @@ if (f.targetCurrencyNotIncluded(targetCurrency)) {
 // Now we will compute the rate, apply it to the amount, and capture the result.
 //(amount/intCurrency) * targetCurrency
 
-const convertedAmount = (parseInt(amount) / f.ratesValue[intCurrency]) * f.ratesValue[targetCurrency];
+const convertedAmount = (amount / f.ratesValue[intCurrency]) * f.ratesValue[targetCurrency];
 let convertedAmnt = convertedAmount.toFixed(4);
 
 // --------------------------------------------------

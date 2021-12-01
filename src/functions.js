@@ -4,7 +4,7 @@ const isAmountUndefined = (amount) => {
 };
 
 const isAmountString = (amount) => {
-    return typeof amount === 'string' || amount instanceof string;
+    return isNaN(amount);
 };
 
 const isIntCurrencyUndefined = (intCurrency) => {
