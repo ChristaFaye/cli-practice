@@ -25,16 +25,29 @@ const targetCurrency = process.argv[4];
 
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
-if (amount === undefined || amount < 0) {
+
+const isAmountUndefined = (amount) => {
+    return amount === undefined || amount < 0
+}
+
+const isIntCurrencyUndefined = (intCurrency) => {
+    return intCurrency === undefined
+}
+
+const isTargetCurrenctyUndefined = (targetCurrency) => {
+    return targetCurrency === undefined
+}
+
+if (isAmountUndefined(amount)) {
     console.error(`Oops, the amount must be greater than 0. Received: `, amount);
     process.exit();
 }
-if (intCurrency === undefined) {
+if (isIntCurrencyUndefined(intCurrency)) {
     console.error(`Oops, you must provide initial currency. Received: `, intCurrency);
     process.exit();
 }
 
-if (targetCurrency === undefined) {
+if (isTargetCurrenctyUndefined(targetCurrency)) {
     console.error(`Oops, you must provide target currency. Received: `, targetCurrency);
     process.exit();
 }
