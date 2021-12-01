@@ -81,17 +81,17 @@ EUR: 0.88 //Euro
 
 
 const { 
-    isIntCurrencyIncluded,
-    isTargetCurrencyIncluded,
+    intCurrencyNotIncluded,
+    targetCurrencyNotIncluded,
 } = require('./functions');
 
 
-if (isIntCurrencyIncluded(intCurrency)) {
+if (intCurrencyNotIncluded(intCurrency)) {
     console.error(`Oops, initial currency is unsupported. The supported currencies are: `, supportedCurrencies);
     process.exit();
 }
 
-if (isTargetCurrencyIncluded(targetCurrency)) {
+if (targetCurrencyNotIncluded(targetCurrency)) {
     console.error(`Oops, target currency is unsupported. The supported currencies are: `, supportedCurrencies);
     process.exit();
 }

@@ -45,23 +45,23 @@ describe('isTargetCurrenctyUndefined()', () => {
 
 //Import supported currencies check functions
 const { 
-  isIntCurrencyIncluded,
-  isTargetCurrencyIncluded,
+  intCurrencyNotIncluded,
+  targetCurrencyNotIncluded,
 } = require('../src/functions');
 
 //Test Cases supported currencies check functions
-describe('isIntCurrencyIncluded()', () => {
-  test('should return false when the initial currency is not supported', () => {
+describe('intCurrencyNotIncluded()', () => {
+  test('should return true when the initial currency is not supported', () => {
     let intCurrency;
-    const result = isIntCurrencyIncluded();
-    expect(result).toBe(false);
+    const result = intCurrencyNotIncluded();
+    expect(result).toBe(true);
   });
 });
 
-describe('isTargetCurrencyIncluded()', () => {
+describe('targetCurrencyNotIncluded()', () => {
   test('should return true when the target currency is not supported', () => {
     let targetCurrency;
-    const result = isTargetCurrencyIncluded();
-    expect(result).toBe(false);
+    const result = targetCurrencyNotIncluded();
+    expect(result).toBe(true);
   });
 });
