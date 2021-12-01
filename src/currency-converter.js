@@ -18,7 +18,6 @@ const amount = process.argv[2];
 const intCurrency = process.argv[3];
 const targetCurrency = process.argv[4];
 
-
 // --------------------------------------------------
 // Step 2: Validate user input
 // --------------------------------------------------
@@ -53,11 +52,13 @@ if (targetCurrency === undefined) {
 // up-to-date rate information: https://www.xe.com/
 
 //Base currency is USD, e.g 1USD = 1.27CAD
-let USD = 1; //US Dollar
-let CAD = 1.27; //Canadian Dollar
-let PHP = 50.37; //Philippine Peso
-let GBP = 0.75; //British Pound
-let EUR = 0.88; //Euro
+const ratesValue = {
+USD: 1, //US Dollar
+CAD: 1.27, //Canadian Dollar
+PHP: 50.37, //Philippine Peso
+GBP: 0.75, //British Pound
+EUR: 0.88 //Euro
+}
 
 
 
@@ -97,6 +98,7 @@ if (supportedCurrencies.includes(targetCurrency) === false) {
 // Now we will compute the rate, apply it to the amount, and capture the result.
 //(amount/intCurrency) * targetCurrency
 
+const convertedAmount = (parseInt(amount) / ratesValue[intCurrency]) * ratesValue[targetCurrency];
 
 // --------------------------------------------------
 // Step 6: Display results
@@ -105,3 +107,4 @@ if (supportedCurrencies.includes(targetCurrency) === false) {
 
 // This message should also include the original amount and currency information
 // supplied by the user.
+console.log(`The conversion is ${amount} ${intCurrency} = ${convertedAmount} ${targetCurrency}. `)
