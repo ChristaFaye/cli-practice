@@ -29,7 +29,10 @@ const targetCurrency = process.argv[4];
 const { 
     isAmountUndefined,
     isIntCurrencyUndefined,
-    isTargetCurrenctyUndefined 
+    isTargetCurrenctyUndefined,
+    intCurrencyNotIncluded,
+    targetCurrencyNotIncluded,
+    supportedCurrencies
 } = require('./functions');
 
 if (isAmountUndefined(amount)) {
@@ -77,13 +80,6 @@ EUR: 0.88 //Euro
 
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
-
-
-
-const { 
-    intCurrencyNotIncluded,
-    targetCurrencyNotIncluded,
-} = require('./functions');
 
 
 if (intCurrencyNotIncluded(intCurrency)) {
