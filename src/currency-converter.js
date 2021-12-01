@@ -25,14 +25,14 @@ const targetCurrency = process.argv[4];
 
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
-
 const { 
     isAmountUndefined,
     isIntCurrencyUndefined,
     isTargetCurrenctyUndefined,
     intCurrencyNotIncluded,
     targetCurrencyNotIncluded,
-    supportedCurrencies
+    supportedCurrencies,
+    ratesValue
 } = require('./functions');
 
 if (isAmountUndefined(amount)) {
@@ -62,13 +62,7 @@ if (isTargetCurrenctyUndefined(targetCurrency)) {
 // up-to-date rate information: https://www.xe.com/
 
 //Base currency is USD, e.g 1USD = 1.27CAD
-const ratesValue = {
-USD: 1, //US Dollar
-CAD: 1.27, //Canadian Dollar
-PHP: 50.37, //Philippine Peso
-GBP: 0.75, //British Pound
-EUR: 0.88 //Euro
-}
+
 
 
 
