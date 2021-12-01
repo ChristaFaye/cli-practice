@@ -22,6 +22,7 @@ const supportedCurrencies = [
     'EUR'
 ];
 
+
 const intCurrencyNotIncluded = (intCurrency) => {
     return supportedCurrencies.includes(intCurrency) === false;
 };
@@ -37,5 +38,6 @@ module.exports = {
     isTargetCurrenctyUndefined,
     //Supported currencies check functions
     intCurrencyNotIncluded,
-    targetCurrencyNotIncluded
+    targetCurrencyNotIncluded,
+    supportedCurrencies
 } ;
