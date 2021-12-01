@@ -80,10 +80,12 @@ const supportedCurrencies = [
 
 if (supportedCurrencies.includes(intCurrency) === false) {
     console.error(`Oops, initial currency is unsupported. The supported currencies are: `, supportedCurrencies);
+    process.exit();
 }
 
 if (supportedCurrencies.includes(targetCurrency) === false) {
     console.error(`Oops, target currency is unsupported. The supported currencies are: `, supportedCurrencies);
+    process.exit();
 }
 
 // --------------------------------------------------
