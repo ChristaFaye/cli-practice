@@ -78,7 +78,13 @@ const supportedCurrencies = [
     'EUR'
 ];
 
+if (supportedCurrencies.includes(intCurrency) === false) {
+    console.error(`Oops, initial currency is unsupported. The supported currencies are: `, supportedCurrencies);
+}
 
+if (supportedCurrencies.includes(targetCurrency) === false) {
+    console.error(`Oops, target currency is unsupported. The supported currencies are: `, supportedCurrencies);
+}
 
 // --------------------------------------------------
 // Step 5: Perform conversion
