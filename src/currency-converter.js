@@ -14,7 +14,9 @@
 // In this step we will capture the command line  information supplied by the user.
 
 // We will store each piece of information in a dedicated variable for later use.
-
+const amount = process.argv[2];
+const intCurrency = process.argv[3];
+const targetCurrency = process.argv[4];
 
 
 // --------------------------------------------------
@@ -24,8 +26,19 @@
 
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
+if (amount === undefined || amount < 0) {
+    console.error(`Oops, the amount must be greater than 0. Received: `, amount);
+    process.exit();
+}
+if (intCurrency === undefined) {
+    console.error(`Oops, you must provide initial currency. Received: `, intCurrency);
+    process.exit();
+}
 
-
+if (targetCurrency === undefined) {
+    console.error(`Oops, you must provide target currency. Received: `, targetCurrency);
+    process.exit();
+}
 
 // --------------------------------------------------
 // Step 3: Define currency conversion rates

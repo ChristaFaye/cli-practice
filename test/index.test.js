@@ -11,7 +11,7 @@
 // same file for illustrative and learning purposes.
 
 function myCoolFunction() {
-  return 'Wow, what a cool function';
+  return 'Wow, what a cool function!!!!';
 }
 
 describe('myCoolFunction()', () => {
