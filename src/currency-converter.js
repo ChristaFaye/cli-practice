@@ -86,13 +86,10 @@ const supportedCurrencies = [
     'EUR'
 ];
 
-const isIntCurrencyIncluded = (intCurrency) => {
-    return supportedCurrencies.includes(intCurrency) === false;
-};
-
-const isTargetCurrencyIncluded = (targetCurrency) => {
-    return supportedCurrencies.includes(targetCurrency) === false;
-};
+const { 
+    isIntCurrencyIncluded,
+    isTargetCurrencyIncluded,
+} = require('./functions');
 
 
 if (isIntCurrencyIncluded(intCurrency)) {
